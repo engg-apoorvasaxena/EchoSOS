@@ -1,0 +1,7 @@
+fastapi==0.110.0
+uvicorn==0.29.0
+vosk==0.3.45
+numpy==1.26.4
+sounddevice==0.4.6
+PyAudio==0.2.13
+twilio==9.0.1
