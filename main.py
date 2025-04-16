@@ -17,7 +17,7 @@ app.add_middleware(
 )
 
 TWILIO_SID = 'ACd8d88dae26ca39cb9ce717cbe067dd7c'
-TWILIO_AUTH = 'be3699ccbc58473d8a496dd5bde638b3'
+TWILIO_AUTH = 'dc0800e99c8fcc8a0cca87ab49ad6ea0'
 TWILIO_PHONE = '+19478885806'  # Your Twilio number
 TO_PHONE = '+918691897799'    # Emergency contact
 

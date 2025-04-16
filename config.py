@@ -9,3 +9,7 @@ TWILIO_AUTH = os.getenv("TWILIO_AUTH_TOKEN")
 TWILIO_PHONE = os.getenv("TWILIO_PHONE_NUMBER")
 EMERGENCY_CONTACT = os.getenv("EMERGENCY_CONTACT")
 
+
+print("[DEBUG] Twilio SID:", TWILIO_SID)
+print("[DEBUG] Twilio Phone:", TWILIO_PHONE)
+print("[DEBUG] Emergency Contact:", EMERGENCY_CONTACT)

@@ -1,5 +1,10 @@
  # detection/sos.py
+import sys
+import os
+
 from twilio.rest import Client
+sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+
 from config import TWILIO_SID, TWILIO_AUTH, TWILIO_PHONE, EMERGENCY_CONTACT
 
 client = Client(TWILIO_SID, TWILIO_AUTH)
