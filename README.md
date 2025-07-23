@@ -137,11 +137,3 @@ TWILIO_PHONE_NUMBER=+11234567890
 
 Built with 💙 as part of a **Smart Emergency Response System** for real-time safety and automated alerting.
 
----
-
-```
-
----
-
-Would you like me to generate and download the `.env.example` file or include a license section too?
-```
