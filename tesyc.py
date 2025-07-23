@@ -1,14 +1,14 @@
 from twilio.rest import Client
 
-account_sid = "ACd8d88dae26ca39cb9ce717cbe067dd7c"
-auth_token = "dc0800e99c8fcc8a0cca87ab49ad6ea0"
+account_sid = "your credentials"
+auth_token = "your credentials"
 client = Client(account_sid, auth_token)
 
 try:
     message = client.messages.create(
         body="Testing Twilio SMS from debug file",
-        from_="+19478885806",  # Your Twilio number
-        to="+918691897799"     # Your verified number
+        from_="",  # Your Twilio number
+        to=""     # Your verified number
     )
     print("[✅] Message sent successfully:", message.sid)
 except Exception as e:
