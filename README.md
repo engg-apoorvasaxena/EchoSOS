@@ -52,7 +52,7 @@ Update the `.env` file inside the `backend/` folder with the following:
 ```env
 TWILIO_ACCOUNT_SID=your_account_sid
 TWILIO_AUTH_TOKEN=your_auth_token
-TWILIO_PHONE_NUMBER=+1234567890
+TWILIO_PHONE_NUMBER=+xxxxxxx
 ```
 
 Also Important in `main.py`, make sure to replace any hardcoded numbers or API placeholders with your actual credentials same as env file.
