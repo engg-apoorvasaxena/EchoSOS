@@ -16,10 +16,10 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
-TWILIO_SID = 'ACd8d88dae26ca39cb9ce717cbe067dd7c'
-TWILIO_AUTH = 'be3699ccbc58473d8a496dd5bde638b3'
-TWILIO_PHONE = '+19478885806'  # Your Twilio number
-TO_PHONE = '+918691897799'    # Emergency contact
+TWILIO_SID = 'Your_id'
+TWILIO_AUTH = 'Your_id'
+TWILIO_PHONE = '+1xxxxxxx'  # Your Twilio number
+TO_PHONE = '+91xxxxxxxxx'    # Emergency contact
 
 
 def get_location_link():
