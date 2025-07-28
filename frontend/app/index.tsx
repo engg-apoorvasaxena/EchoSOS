@@ -5,7 +5,7 @@ import axios from 'axios';
 export default function Home() {
   const [status, setStatus] = useState('Idle');
   const [error, setError] = useState('');
-  const BASE_URL = "http://192.168.0.106:8000"; // Update if IP changes
+  const BASE_URL = "http://192.168.0.103:8000"; // Update if IP changes
 
   const startDetection = async () => {
     try {
