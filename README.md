@@ -54,7 +54,7 @@ TWILIO_ACCOUNT_SID=your_account_sid
 TWILIO_AUTH_TOKEN=your_auth_token
 TWILIO_PHONE_NUMBER=+xxxxxxx
 ```
-
+Make sure your Twilio phone numbers are eligible for the type of calling you're opting for. For example- a purchased phone number that only has local calling capabilities will not be able to make international calls.
 Also Important in `main.py`, make sure to replace any hardcoded numbers or API placeholders with your actual credentials same as env file.
 
 3. **Run the backend server**
