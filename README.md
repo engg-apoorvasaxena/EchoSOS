@@ -10,20 +10,22 @@ A **real-time full-stack emergency distress detection system** using **voice inp
 
 distress_sos_system/
 ├── backend/
-│   ├── detection/         # Real-time audio listener and SOS trigger logic
-│   ├── model/             # ML models for distress detection (if any)
-│   ├── tests/             # Test scripts
-│   ├── main.py            # FastAPI backend entrypoint
-│   ├── config.py          # Twilio / location configuration
-│   ├── .env               # 🔐 Credentials file (not tracked)
-│   ├── requirements.txt   # Python dependencies
-│   └── ...
-├── frontend/
-│   ├── app/               # React Native app screens
-│   ├── assets/            # Images & fonts
-│   ├── App.js / index.tsx # App entry
-│   ├── package.json       # JS dependencies
-│   └── ...
+│   ├── detection/
+│   │   ├── listener.py        # Real-time audio stream & wake word detection
+│   │   ├── emotion.py         # Emotion detection using Hugging Face transformers
+│   │   ├── sos.py             # SOS alert logic + SQLite logging
+│   ├── main.py                # FastAPI backend endpoints
+│   ├── config.py              # Environment & Twilio configuration
+│   ├── sos_logs.db            # Local SQLite database for SOS triggers
+│   ├── requirements.txt       # Python dependencies
+│   └── .env                   # 🔐 Credentials file (ignored by git)
+│
+└── frontend/
+    ├── app/
+    │   ├── index.tsx          # Main React Native UI for detection controls
+    ├── assets/                # App icons and images
+    ├── App.js / index.tsx     # App entry
+    ├── package.json  
 
 ````
 
@@ -53,6 +55,7 @@ Update the `.env` file inside the `backend/` folder with the following:
 TWILIO_ACCOUNT_SID=your_account_sid
 TWILIO_AUTH_TOKEN=your_auth_token
 TWILIO_PHONE_NUMBER=+xxxxxxx
+EMERGENCY_CONTACT=+xxxxxxxxxx
 ```
 Make sure your Twilio phone numbers are eligible for the type of calling you're opting for. For example- a purchased phone number that only has local calling capabilities will not be able to make international calls.
 Also Important in `main.py`, make sure to replace any hardcoded numbers or API placeholders with your actual credentials same as env file.
@@ -111,13 +114,13 @@ npx expo start
 
 ## 📲 Features
 
-* 🎙 Real-time **voice-based SOS detection**
-* 📡 **Automatic call and SMS** on emergency trigger
-* 📍 Sends **live GPS location**
-* 🔊 Optional **soundwave animation**
-* 📳 Haptic feedback when toggling detection
-* 📇 Add/edit emergency contacts (via local or cloud)
-* 🌐 Cross-platform support (iOS & Android)
+* 🎙️ Voice-triggered detection — listens for “help me”
+* 🧠 Emotion-based verification — uses argish/text-emotion-classifier-distilroberta to confirm fear before triggering SOS
+* 📞 Automatic SOS alerts — sends SMS + call using Twilio
+* 📍 Includes live location using ipapi.co
+* 💾 SQLite logging — every triggered SOS is saved in sos_logs.db
+* 🔗 Simple REST endpoints:
+
 
 ---
 
